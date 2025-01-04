@@ -26,7 +26,7 @@ export const ArchLinuxLogoButton = () => {
   }
 
   return (
-    <button onClicked={openWofi} cssClasses={["workspace-buttons"]}>
+    <button onClicked={openWofi} cssClasses={["arch-button"]}>
       <image iconName={GLib.get_os_info("LOGO") || "missing-symbolic"} />
     </button>
   );

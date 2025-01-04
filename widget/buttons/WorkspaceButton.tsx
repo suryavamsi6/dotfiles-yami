@@ -1,11 +1,12 @@
 import Hyprland from "gi://AstalHyprland";
 import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { translate } from "../utils/Functions";
 
 export const WorkspaceButton = () => {
   const hyprland = Hyprland.get_default();
 
   return (
-    <box cssClasses={["Workspaces"]}>
+    <box cssClasses={["workspaces"]}>
       {bind(hyprland, "workspaces").as((wss) =>
         wss
           .filter((ws) => !(ws.id >= -99 && ws.id <= -2)) // filter out special workspaces
@@ -14,12 +15,12 @@ export const WorkspaceButton = () => {
             <button
               cssClasses={bind(hyprland, "focusedWorkspace").as((fw) =>
                 ws === fw
-                  ? ["workspace-buttons-active"]
+                  ? ["workspace-buttons", "active"]
                   : ["workspace-buttons"],
               )}
               onClicked={() => ws.focus()}
             >
-              {ws.id}
+              {translate(ws.id)}
             </button>
           )),
       )}

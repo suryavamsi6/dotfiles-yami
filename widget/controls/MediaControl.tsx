@@ -1,17 +1,17 @@
 import Mpris from "gi://AstalMpris";
 import { bind } from "../../../../../../../usr/share/astal/gjs";
 import { Gtk } from "astal/gtk4";
+import { Icons } from "../utils/Icons";
 
 export function MediaControl() {
   const mpris = Mpris.get_default();
 
   return (
-    <box className="Media">
+    <button cssClasses={["control-buttons"]}>
       {bind(mpris, "players").as((ps) =>
         ps[0] ? (
           <box>
             <box
-              className="Cover"
               valign={Gtk.Align.CENTER}
               css={bind(ps[0], "coverArt").as(
                 (cover) => `background-image: url('${cover}');`,
@@ -24,9 +24,9 @@ export function MediaControl() {
             />
           </box>
         ) : (
-          "Nothing Playing"
+          Icons.disc
         ),
       )}
-    </box>
+    </button>
   );
 }

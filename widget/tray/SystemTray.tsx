@@ -9,6 +9,7 @@ export function SystemTray() {
       {bind(tray, "items").as((items) => {
         return items.map((item) => (
           <button
+            onClicked={() => item.activate(2, 2)}
             tooltipText={item.get_title()}
             cssClasses={["system-buttons"]}
           >

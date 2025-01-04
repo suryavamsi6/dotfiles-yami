@@ -30,4 +30,7 @@ export const Icons = {
 
   //Download
   download: "\udb80\udc45",
+
+  //Disc
+  disc: "\uede9",
 };

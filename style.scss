@@ -3,43 +3,49 @@ $fg-color: #{"@theme_fg_color"};
 $bg-color: #{"@theme_bg_color"};
 
 window.Bar {
+    margin: 10px;
+    margin-top: 5px;
     background: transparent;
     color: $fg-color;
-    font-weight: bold;
+    font-family: "JetBrains Mono", ui-rounded;
 
     >centerbox {
         background: transparent;
-        border-radius: 10px;
+        border-radius: 16px;
         margin: 8px;
     }
 
     .menu-button {
-        border-radius: 10px;
+        border-radius: 16px;
         background: $bg-color;
         color: $fg-color;
-        padding: 0;
-        margin: 0;
-
     }
 
     .toggle {
         background: $bg-color;
         color: $fg-color;
+        min-height: 0;
+        min-width: 0;
+        font-weight: 400;
     }
 
-    .label-time {
-        background: $bg-color;
-        color: $fg-color;
+    .label-time{
+        padding:0
     }
+
 
     button {
-        border-radius: 8px;
+        border-radius: 16px;
         margin: 2px;
     }
 
     .workspace-buttons {
         background: $bg-color;
         color: $fg-color;
+    }
+
+    .workspaces {
+        padding-left: 10px
     }
     .system-buttons {
         background: $bg-color;
@@ -50,11 +56,15 @@ window.Bar {
         color: $fg-color;
     }
 
-    .workspace-buttons-active {
+    .active {
         background: blue;
         color: $bg-color;
     }
 
+    .arch-button {
+        background: $bg-color;
+        color: $fg-color;
+    }
 
     .bt-button{
         margin-top:5px;

@@ -9,7 +9,18 @@ import { MediaControl } from "./controls/MediaControl";
 import { BatteryController } from "./controls/BatteryControl";
 import { InternetSpeedControl } from "./controls/InternetSpeedControl";
 
-const time = Variable("").poll(1000, "date");
+const time = Variable("").poll(1000, () => {
+  const now = new Date();
+  const options: Intl.DateTimeFormatOptions = {
+    month: "short",
+    day: "numeric",
+    weekday: "short",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+  return now.toLocaleString("en-US", options);
+});
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor;
@@ -26,9 +37,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       <centerbox>
         <box cssName="centerbox" halign={Gtk.Align.START}>
           <ArchLinuxLogoButton />
-          <SystemTray />
           <WorkspaceButton />
-          {/*<WifiControl />*/}
         </box>
         <box>
           <MediaControl />
@@ -38,6 +47,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
           <BatteryController />
           <WifiControl />
           <BluetoothControl />
+          <SystemTray />
           <menubutton hexpand cssClasses={["menu-button"]}>
             <label cssClasses={["label-time"]} label={time()} />
             <popover>
