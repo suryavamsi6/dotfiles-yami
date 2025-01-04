@@ -1,0 +1,64 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg-color: #{"@theme_fg_color"};
+$bg-color: #{"@theme_bg_color"};
+
+window.Bar {
+    background: transparent;
+    color: $fg-color;
+    font-weight: bold;
+
+    >centerbox {
+        background: transparent;
+        border-radius: 10px;
+        margin: 8px;
+    }
+
+    .menu-button {
+        border-radius: 10px;
+        background: $bg-color;
+        color: $fg-color;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .toggle {
+        background: $bg-color;
+        color: $fg-color;
+    }
+
+    .label-time {
+        background: $bg-color;
+        color: $fg-color;
+    }
+
+    button {
+        border-radius: 8px;
+        margin: 2px;
+    }
+
+    .workspace-buttons {
+        background: $bg-color;
+        color: $fg-color;
+    }
+    .system-buttons {
+        background: $bg-color;
+        color: $fg-color;
+    }
+    .control-buttons {
+        background: $bg-color;
+        color: $fg-color;
+    }
+
+    .workspace-buttons-active {
+        background: blue;
+        color: $bg-color;
+    }
+
+
+    .bt-button{
+        margin-top:5px;
+    }
+}
+
+
