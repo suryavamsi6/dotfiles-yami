@@ -12,12 +12,15 @@ export function WifiControl() {
   return (
     <box>
       <box visible={wired != null && wired.as(Boolean)}>
-        <button cssClasses={["control-buttons"]} onClicked={setWifiState}>
+        <button
+          cssClasses={["control-buttons", "wifi-info"]}
+          onClicked={setWifiState}
+        >
           {bind(wifi.get(), "enabled").as((enabled) =>
             enabled ? <label label={"󰖩"} /> : <label label={"󰖪"} />,
           )}
         </button>
-        <button cssClasses={["control-buttons"]}>
+        <button cssClasses={["control-buttons", "ethernet-info"]}>
           {bind(wired.get(), "device").as((device) =>
             device != null ? <label label={"󰈁"} /> : "",
           )}

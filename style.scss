@@ -1,6 +1,10 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$fg-color: #{"@theme_fg_color"};
-$bg-color: #{"@theme_bg_color"};
+/* if you have it installed via NPM & a CSS loader configured */
+
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+$fg-color: var(--ctp-mocha-text);
+$bg-color: var(--ctp-mocha-base);
 
 window.Bar {
     margin: 10px;
@@ -40,8 +44,8 @@ window.Bar {
     }
 
     .workspace-buttons {
-        background: $bg-color;
-        color: #b0ffff;
+        background: var(--ctp-mocha-base);
+        color: var(--ctp-mocha-sky);
     }
 
     .workspaces {
@@ -56,31 +60,66 @@ window.Bar {
         color: $fg-color;
     }
 
-    .workspace-buttons:not(.active):hover{
-        background: linear-gradient(to bottom, #333333, #111111);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6),
-        inset 0 0 10px rgba(0, 255, 255, 0.3);
-        transform: scale(1.05);
+
+    // Workspace buttons hover (non-active)
+    .workspace-buttons:not(.active):hover {
+        background: linear-gradient(to bottom, $bg-color, #111111);  // Dark gradient
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(243, 138, 168, 0.3);  // Soft pink inner glow
+        transform: scale(1.05);  // Subtle hover scale effect
     }
 
+    // Active workspace button
     .active {
-        background: linear-gradient(to bottom, #444444, #000000);
-        border: 2px solid #555555;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(255, 255, 255, 0.3);
-        color: #b0ffff;
-        font-weight: bold;
-        transition: all 0.2s ease-in-out;
+        background: linear-gradient(to bottom, #2D2834, #000000);  // Darker gradient for active state
+        border: 2px solid var(--ctp-mocha-sky);  // Sky color as accent border
+        border-radius: 50%;  // Circular button shape
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(255, 255, 255, 0.3);  // Glowing effect with white inset
+        color: var(--ctp-mocha-sky);  // Light green color for text
+        font-weight: bold;  // Make text bold
+        transition: all 0.2s ease-in-out;  // Smooth transition for hover/active state changes
     }
 
 
     .arch-button {
-        background: $bg-color;
-        color: #b0ffff;
+        background: var(--ctp-mocha-base);
+        outline-color: rgba(0,0,0,0);
+        border-color: $bg-color
     }
 
     .bt-button{
         margin-top:5px;
+    }
+
+    .system-buttons {
+        color: var(--ctp-mocha-peach);
+    }
+
+    .internet-speed-info {
+        color: var(--ctp-mocha-green);
+    }
+
+    .volume-info {
+        color: var(--ctp-mocha-blue);
+    }
+
+    .battery-info {
+        color: var(--ctp-mocha-green);
+    }
+
+    .wifi-info {
+        color: var(--ctp-mocha-yellow);
+    }
+
+    .ethernet-info {
+        color: var(--ctp-mocha-yellow);
+    }
+
+    .bluetooth-info {
+        color: var(--ctp-mocha-blue)
+    }
+
+    .power-button {
+        color: var(--ctp-mocha-red)
     }
 }
 

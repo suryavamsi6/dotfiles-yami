@@ -79,7 +79,7 @@ export function BatteryController() {
 
   return (
     <box>
-      <button cssClasses={["control-buttons"]}>
+      <button cssClasses={["control-buttons", "battery-info"]}>
         <label>
           {labelBinding((batteryIcon) => {
             return batteryIcon;

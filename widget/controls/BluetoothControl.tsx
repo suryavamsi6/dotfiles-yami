@@ -9,7 +9,10 @@ export function BluetoothControl() {
   }
   return (
     <box>
-      <button onClicked={setBluetoothState} cssClasses={["control-buttons"]}>
+      <button
+        onClicked={setBluetoothState}
+        cssClasses={["control-buttons", "bluetooth-info"]}
+      >
         {bind(bluetooth, "is_powered").as((isPowered) =>
           isPowered ? <label></label> : <label>󰂲</label>,
         )}

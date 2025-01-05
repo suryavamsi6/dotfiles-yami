@@ -11,7 +11,7 @@ export function SystemTray() {
           <button
             onClicked={() => item.activate(2, 2)}
             tooltipText={item.get_title()}
-            cssClasses={["system-buttons"]}
+            cssClasses={["system-buttons", "system-info"]}
           >
             <image file={item.get_gicon().to_string()}></image>
           </button>

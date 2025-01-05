@@ -37,11 +37,12 @@ export function SystemInfo() {
     const usedGB =
       ((fsUsage.blocks - fsUsage.bavail) * fsUsage.block_size) / 1024 ** 3;
     const usedPercent = (usedGB / totalGB) * 100;
-
+    const freeGB = totalGB - usedGB;
     return {
       totalGB: totalGB.toFixed(1),
       usedGB: usedGB.toFixed(1),
       usedPercent: usedPercent.toFixed(0),
+      freeGB: freeGB.toFixed(1),
     };
   }
 
@@ -73,14 +74,14 @@ export function SystemInfo() {
         tooltipText={diskUsage((usage) => {
           return `${usage.usedGB}GB out of ${usage.totalGB}GB used`;
         })}
-        cssClasses={["control-buttons"]}
+        cssClasses={["system-buttons"]}
         label={diskUsage((usage) => {
-          return `${Icons.hardDisk} ${usage.usedPercent}% (${usage.totalGB - usage.usedGB}GB)`;
+          return `${Icons.hardDisk} ${usage.usedPercent}% (${usage.freeGB}GB)`;
         })}
       />
       <button
         tooltipText={"System Temperature"}
-        cssClasses={["control-buttons"]}
+        cssClasses={["system-buttons"]}
         label={maxCpuTemp((temp) => {
           return `${getTempIcon(temp)} ${temp}°C`;
         })}

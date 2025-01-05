@@ -10,6 +10,8 @@ import { BatteryController } from "./controls/BatteryControl";
 import { InternetSpeedControl } from "./controls/InternetSpeedControl";
 import { AudioControl } from "./controls/AudioControl";
 import { SystemInfo } from "./controls/SystemInfo";
+import { PowerControl } from "./controls/PowerControl";
+import { NotificationInfo } from "./tray/NotificationInfo";
 
 const time = Variable("").poll(1000, () => {
   const now = new Date();
@@ -58,6 +60,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
               <Gtk.Calendar />
             </popover>
           </menubutton>
+          <PowerControl />
         </box>
       </centerbox>
     </window>

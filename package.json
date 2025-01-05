@@ -1,6 +1,7 @@
 {
     "name": "astal-shell",
     "dependencies": {
+        "@catppuccin/palette": "^1.7.1",
         "astal": "/usr/share/astal/gjs"
     },
     "devDependencies": {

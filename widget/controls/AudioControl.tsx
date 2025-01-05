@@ -29,7 +29,7 @@ export function AudioControl() {
   return (
     <box>
       <button
-        cssClasses={["control-buttons"]}
+        cssClasses={["control-buttons", "volume-info"]}
         label={bind(speaker, "volume").as(
           (volume) =>
             `${getVolumeIcon(volume)} ${Math.round(volume * 100).toString()}%`,

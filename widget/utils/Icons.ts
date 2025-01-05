@@ -51,4 +51,7 @@ export const Icons = {
   lowTemp: "\uf2cb",
   mediumTemp: "\uf2c9",
   highTemp: "\uf2c7",
+
+  //Power
+  power: "\udb81\udc25",
 };

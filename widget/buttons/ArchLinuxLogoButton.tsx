@@ -36,7 +36,10 @@ export const ArchLinuxLogoButton = () => {
     }
   }
   return (
-    <button onClicked={openWofi} cssClasses={["arch-button"]}>
+    <button
+      onClicked={openWofi}
+      cssClasses={["workspace-buttons", "arch-button"]}
+    >
       {icon ? icon : <image iconName={iconName!} />}
     </button>
   );
