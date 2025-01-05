@@ -78,7 +78,7 @@ export function BatteryController() {
   });
 
   return (
-    <box>
+    <box visible={battery != null}>
       <button cssClasses={["control-buttons", "battery-info"]}>
         <label>
           {labelBinding((batteryIcon) => {
