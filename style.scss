@@ -7,8 +7,8 @@ window.Bar {
     margin-top: 5px;
     background: transparent;
     color: $fg-color;
-    font-family: "JetBrains Mono", ui-rounded;
-
+    font-family: 'CaskaydiaCove Nerd Font', monospace;
+    font-size: 13px;
     >centerbox {
         background: transparent;
         border-radius: 16px;
@@ -41,7 +41,7 @@ window.Bar {
 
     .workspace-buttons {
         background: $bg-color;
-        color: $fg-color;
+        color: #b0ffff;
     }
 
     .workspaces {
@@ -56,14 +56,27 @@ window.Bar {
         color: $fg-color;
     }
 
-    .active {
-        background: blue;
-        color: $bg-color;
+    .workspace-buttons:not(.active):hover{
+        background: linear-gradient(to bottom, #333333, #111111);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6),
+        inset 0 0 10px rgba(0, 255, 255, 0.3);
+        transform: scale(1.05);
     }
+
+    .active {
+        background: linear-gradient(to bottom, #444444, #000000);
+        border: 2px solid #555555;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(255, 255, 255, 0.3);
+        color: #b0ffff;
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+    }
+
 
     .arch-button {
         background: $bg-color;
-        color: $fg-color;
+        color: #b0ffff;
     }
 
     .bt-button{

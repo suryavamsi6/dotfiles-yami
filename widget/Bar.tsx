@@ -8,6 +8,8 @@ import { BluetoothControl } from "./controls/BluetoothControl";
 import { MediaControl } from "./controls/MediaControl";
 import { BatteryController } from "./controls/BatteryControl";
 import { InternetSpeedControl } from "./controls/InternetSpeedControl";
+import { AudioControl } from "./controls/AudioControl";
+import { SystemInfo } from "./controls/SystemInfo";
 
 const time = Variable("").poll(1000, () => {
   const now = new Date();
@@ -38,12 +40,14 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
         <box cssName="centerbox" halign={Gtk.Align.START}>
           <ArchLinuxLogoButton />
           <WorkspaceButton />
+          <SystemInfo />
         </box>
         <box>
           <MediaControl />
         </box>
         <box halign={Gtk.Align.END}>
           <InternetSpeedControl />
+          <AudioControl />
           <BatteryController />
           <WifiControl />
           <BluetoothControl />

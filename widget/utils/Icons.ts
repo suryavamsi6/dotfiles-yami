@@ -33,4 +33,22 @@ export const Icons = {
 
   //Disc
   disc: "\uede9",
+
+  //Linux
+  arch: "\udb82\udcc7",
+  linux: "\udb80\udf3d",
+
+  //Volume
+  highVolume: "\udb81\udd7e",
+  lowVolume: "\udb81\udd7f",
+  mediumVolume: "\udb81\udd80",
+  mute: "\udb81\udd81",
+
+  //Harddisk
+  hardDisk: "\udb80\udeca",
+
+  //Temp
+  lowTemp: "\uf2cb",
+  mediumTemp: "\uf2c9",
+  highTemp: "\uf2c7",
 };

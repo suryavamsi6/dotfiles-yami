@@ -11,14 +11,7 @@ export function InternetSpeedControl() {
   const interfaceName = "enp4s0";
   const rxFile = `/sys/class/net/${interfaceName}/statistics/rx_bytes`;
   let rxInitial = parseInt(readFile(rxFile).trim());
-  // Shell command to get download and upload speeds
-  const command = `
-  RX=$(cat /sys/class/net/${interfaceName}/statistics/rx_bytes);
-  sleep 1;
-  RX_NEW=$(cat /sys/class/net/${interfaceName}/statistics/rx_bytes);
-  RX_SPEED=$(( (RX_NEW - RX)));
-  echo "$RX_SPEED";
-`;
+
   function formatBytes(bytes: number): string {
     if (bytes < 1024) {
       return `${Icons.download} ${bytes.toFixed(1)}B/s`;

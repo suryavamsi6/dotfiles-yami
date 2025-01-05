@@ -1,6 +1,17 @@
 import GLib from "gi://GLib?version=2.0";
+import { Icons } from "../utils/Icons";
 
 export const ArchLinuxLogoButton = () => {
+  let iconName = GLib.get_os_info("LOGO");
+  let icon: String = "";
+  if (!iconName) {
+    icon = Icons.linux;
+  }
+
+  if (GLib.get_os_info("ID") == "arch") {
+    icon = Icons.arch;
+  }
+
   function openWofi() {
     try {
       const [pkillSuccess, pkillStdout, pkillStderr, pkillStatus] =
@@ -24,10 +35,9 @@ export const ArchLinuxLogoButton = () => {
       console.error("Failed to execute command:", error);
     }
   }
-
   return (
     <button onClicked={openWofi} cssClasses={["arch-button"]}>
-      <image iconName={GLib.get_os_info("LOGO") || "missing-symbolic"} />
+      {icon ? icon : <image iconName={iconName!} />}
     </button>
   );
 };
