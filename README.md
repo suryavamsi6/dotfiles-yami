@@ -1,4 +1,4 @@
-# dotfiles-yami
+# Dotfiles-yami
 
 ![Desktop Preview](assets/img.png)
 
