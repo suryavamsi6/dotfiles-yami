@@ -5,17 +5,16 @@ import { Icons } from "../utils/Icons";
 
 export function MediaControl() {
   const mpris = Mpris.get_default();
-
+  const players = bind(mpris, "players");
   return (
     <button cssClasses={["control-buttons"]}>
       {bind(mpris, "players").as((ps) =>
         ps[0] ? (
           <box>
-            <box
+            <image
+              cssClasses={["media-cover"]}
               valign={Gtk.Align.CENTER}
-              css={bind(ps[0], "coverArt").as(
-                (cover) => `background-image: url('${cover}');`,
-              )}
+              file={bind(players.get()[0], "coverArt").as(String)}
             />
             <label
               label={bind(ps[0], "title").as(

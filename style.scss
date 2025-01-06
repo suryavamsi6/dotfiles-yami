@@ -60,7 +60,6 @@ window.Bar {
         color: $fg-color;
     }
 
-
     // Workspace buttons hover (non-active)
     .workspace-buttons:not(.active):hover {
         background: linear-gradient(to bottom, $bg-color, #111111);  // Dark gradient
@@ -120,6 +119,10 @@ window.Bar {
 
     .power-button {
         color: var(--ctp-mocha-red)
+    }
+
+    .media-cover {
+        margin-right: 5px;
     }
 }
 
