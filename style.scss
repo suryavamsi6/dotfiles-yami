@@ -124,6 +124,32 @@ window.Bar {
     .media-cover {
         margin-right: 5px;
     }
-}
+
+    @keyframes glowing-border {
+        0% {
+            box-shadow: 0 0 8px var(--ctp-mocha-sky),
+            inset 0 -3px 5px rgba(255, 255, 255, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 15px var(--ctp-mocha-sky),
+            inset 0 -3px 7px rgba(255, 255, 255, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 8px var(--ctp-mocha-sky),
+            inset 0 -3px 5px rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    .playing {
+        background: linear-gradient(to bottom, #2D2834, #000000); /* Darker gradient for active state */
+        border: 2px solid var(--ctp-mocha-sky); /* Sky color as accent border */
+        color: var(--ctp-mocha-sky); /* Sky color for text */
+        font-weight: bold; /* Make text bold */
+        animation: glowing-border 2s infinite ease-in-out; /* Apply glowing animation */
+        transition: all 0.2s ease-in-out; /* Smooth transition for state changes */
+    }
+
+
+    }
 
 

@@ -54,4 +54,7 @@ export const Icons = {
 
   //Power
   power: "\udb81\udc25",
+
+  //Generic Application
+  application: "\udb82\udcc6",
 };

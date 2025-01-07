@@ -7,7 +7,7 @@ export function MediaControl() {
   const mpris = Mpris.get_default();
   const players = bind(mpris, "players");
   return (
-    <button cssClasses={["control-buttons"]}>
+    <button cssClasses={["control-buttons", "playing"]}>
       {bind(mpris, "players").as((ps) =>
         ps[0] ? (
           <box>
