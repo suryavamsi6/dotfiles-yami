@@ -1,5 +1,4 @@
 node_modules/
 @girs/
 .idea/
-result/
-
+/result/
