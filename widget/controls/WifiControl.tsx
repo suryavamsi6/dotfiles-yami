@@ -1,5 +1,5 @@
 import Network from "gi://AstalNetwork";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 
 export function WifiControl() {
   const network = Network.get_default();

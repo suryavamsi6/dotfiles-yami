@@ -1,5 +1,5 @@
 import Battery from "gi://AstalBattery";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 import { Icons } from "../utils/Icons";
 import { Variable } from "astal";
 

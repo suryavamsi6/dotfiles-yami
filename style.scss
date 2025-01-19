@@ -1,10 +1,10 @@
 // https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
 /* if you have it installed via NPM & a CSS loader configured */
 
-@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
 
-$fg-color: var(--ctp-mocha-text);
-$bg-color: var(--ctp-mocha-base);
+$fg-color: #cdd6f4;
+$bg-color: #1e1e2e;
+$mocha-sky: #89dceb;
 
 window.Bar {
     margin: 10px;
@@ -44,8 +44,8 @@ window.Bar {
     }
 
     .workspace-buttons {
-        background: var(--ctp-mocha-base);
-        color: var(--ctp-mocha-sky);
+        background: #1e1e2e;
+        color: #89dceb;
     }
 
     .workspaces {
@@ -70,17 +70,17 @@ window.Bar {
     // Active workspace button
     .active {
         background: linear-gradient(to bottom, #2D2834, #000000);  // Darker gradient for active state
-        border: 2px solid var(--ctp-mocha-sky);  // Sky color as accent border
+        border: 2px solid $mocha-sky;  // Sky color as accent border
         border-radius: 50%;  // Circular button shape
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(255, 255, 255, 0.3);  // Glowing effect with white inset
-        color: var(--ctp-mocha-sky);  // Light green color for text
+        color:  $mocha-sky;  // Light green color for text
         font-weight: bold;  // Make text bold
         transition: all 0.2s ease-in-out;  // Smooth transition for hover/active state changes
     }
 
 
     .arch-button {
-        background: var(--ctp-mocha-base);
+        background: $bg-color;
         outline-color: rgba(0,0,0,0);
         border-color: $bg-color
     }
@@ -90,35 +90,35 @@ window.Bar {
     }
 
     .system-buttons {
-        color: var(--ctp-mocha-peach);
+        color: #fab387;
     }
 
     .internet-speed-info {
-        color: var(--ctp-mocha-green);
+        color: #a6e3a1;
     }
 
     .volume-info {
-        color: var(--ctp-mocha-blue);
+        color: #89b4fa;
     }
 
     .battery-info {
-        color: var(--ctp-mocha-green);
+        color: #a6e3a1;
     }
 
     .wifi-info {
-        color: var(--ctp-mocha-yellow);
+        color: #f9e2af;
     }
 
     .ethernet-info {
-        color: var(--ctp-mocha-yellow);
+        color: #f9e2af;
     }
 
     .bluetooth-info {
-        color: var(--ctp-mocha-blue)
+        color: #89b4fa
     }
 
     .power-button {
-        color: var(--ctp-mocha-red)
+        color: #f38ba8
     }
 
     .media-cover {
@@ -127,29 +127,29 @@ window.Bar {
 
     @keyframes glowing-border {
         0% {
-            box-shadow: 0 0 8px var(--ctp-mocha-sky),
+            box-shadow: 0 0 8px $mocha-sky,
             inset 0 -3px 5px rgba(255, 255, 255, 0.3);
         }
         50% {
-            box-shadow: 0 0 15px var(--ctp-mocha-sky),
+            box-shadow: 0 0 15px $mocha-sky,
             inset 0 -3px 7px rgba(255, 255, 255, 0.5);
         }
         100% {
-            box-shadow: 0 0 8px var(--ctp-mocha-sky),
+            box-shadow: 0 0 8px $mocha-sky,
             inset 0 -3px 5px rgba(255, 255, 255, 0.3);
         }
     }
 
     .playing {
         background: linear-gradient(to bottom, #2D2834, #000000); /* Darker gradient for active state */
-        border: 2px solid var(--ctp-mocha-sky); /* Sky color as accent border */
-        color: var(--ctp-mocha-sky); /* Sky color for text */
+        border: 2px solid $mocha-sky; /* Sky color as accent border */
+        color: $mocha-sky; /* Sky color for text */
         font-weight: bold; /* Make text bold */
         animation: glowing-border 2s infinite ease-in-out; /* Apply glowing animation */
         transition: all 0.2s ease-in-out; /* Smooth transition for state changes */
     }
 
 
-    }
+}
 
 

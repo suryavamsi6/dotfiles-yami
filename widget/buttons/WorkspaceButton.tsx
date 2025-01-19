@@ -1,5 +1,5 @@
 import Hyprland from "gi://AstalHyprland";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 import { translate } from "../utils/Functions";
 
 export const WorkspaceButton = () => {

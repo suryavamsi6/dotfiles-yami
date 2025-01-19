@@ -1,4 +1,5 @@
-import { exec, readFile } from "../../../../../../../usr/share/astal/gjs";
+import { readFile } from "astal/file";
+import { exec } from "astal/process";
 import { Variable } from "astal";
 import { Icons } from "../utils/Icons";
 import { interval } from "astal/time";

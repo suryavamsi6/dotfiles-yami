@@ -1,5 +1,5 @@
 import { Icons } from "../utils/Icons";
-import { exec, subprocess } from "../../../../../../../usr/share/astal/gjs";
+import { exec, subprocess } from "astal/process";
 
 export function PowerControl() {
   function logOut() {

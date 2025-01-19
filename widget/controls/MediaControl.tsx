@@ -1,5 +1,5 @@
 import Mpris from "gi://AstalMpris";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 import { Gtk } from "astal/gtk4";
 import { Icons } from "../utils/Icons";
 

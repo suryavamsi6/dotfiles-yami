@@ -1,5 +1,5 @@
 import Wp from "gi://AstalWp";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 import { Icons } from "../utils/Icons";
 
 export function AudioControl() {

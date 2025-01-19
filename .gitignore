@@ -1,3 +1,5 @@
 node_modules/
 @girs/
-.idea
+.idea/
+result/
+

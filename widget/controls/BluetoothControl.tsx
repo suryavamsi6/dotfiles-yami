@@ -1,5 +1,5 @@
 import Bluetooth from "gi://AstalBluetooth";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 
 const bluetooth = Bluetooth.get_default();
 

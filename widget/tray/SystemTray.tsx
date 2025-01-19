@@ -1,5 +1,5 @@
 import Tray from "gi://AstalTray";
-import { bind } from "../../../../../../../usr/share/astal/gjs";
+import { bind } from "astal";
 import AstalApps from "gi://AstalApps?version=0.1";
 import { Icons } from "../utils/Icons";
 export function SystemTray() {

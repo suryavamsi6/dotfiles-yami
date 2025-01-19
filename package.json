@@ -2,9 +2,7 @@
     "name": "astal-shell",
     "dependencies": {
         "@catppuccin/palette": "^1.7.1",
-        "astal": "/usr/share/astal/gjs"
-    },
-    "devDependencies": {
-        "prettier": "^3.4.2"
+        "astal": "/nix/store/wncqs8vpjdlja3zg6p7x6bgz7q1rgxig-astal-gjs/share/astal/gjs",
+        "sass": "^1.83.4"
     }
 }
